@@ -9,7 +9,7 @@ public class Data {
 
     //相对路径
     //绝对路劲  / 相当于当前的项目
-    public static URL headerURL=Data.class.getResource("statics/header.png");
+    public static URL headerURL=Data.class.getResource("statics/header.jpg");
     public static ImageIcon header=new ImageIcon(headerURL);
 
     public static URL upURL=Data.class.getResource("statics/up.png");

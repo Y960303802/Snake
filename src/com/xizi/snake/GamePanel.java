@@ -32,7 +32,7 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
     boolean isFail=false;///游戏失败状态
 
     //定时器
-    Timer timer=new Timer(100,this);//100毫秒执行一次
+    Timer timer=new Timer(80,this);//100毫秒执行一次
 
     //构造器
     public GamePanel() {
@@ -65,15 +65,15 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);//清屏
         //绘制静态的面板
-        this.setBackground(Color.white);
-        Data.header.paintIcon(this,g,25,11);//头部广告栏
+        this.setBackground(new Color(0xFF100E));
+        Data.header.paintIcon(this,g,0,0);//头部广告栏
         g.fillRect(25,75,850,600);//默认游戏界面
 
         //画积分
         g.setColor(Color.WHITE);
-        g.setFont(new Font("微软雅黑",Font.BOLD,18));
-        g.drawString("长度 :"+length,750,35);
-        g.drawString("分数 :"+score,750,50);
+        g.setFont(new Font("微软雅黑",Font.BOLD,25));
+        g.drawString("长度 :"+length,500,45);
+        g.drawString("分数 :"+score,300,45);
 
 
         //画食物
@@ -192,8 +192,6 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
                     isFail=true;
                 }
             }
-
-
 
             repaint();//重画页面
         }
